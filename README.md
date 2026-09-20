@@ -2,6 +2,8 @@
 
 > Fast, open-source website health checks for the weird web.
 
+**Live demo:** https://indie-site-audit.vercel.app
+
 ![Indie Site Audit interface](docs/indie-site-audit.png)
 
 Indie Site Audit gives independent website owners a quick, readable health check without an enterprise dashboard, signup wall, or giant pile of vanity metrics.
