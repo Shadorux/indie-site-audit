@@ -1,0 +1,101 @@
+---
+const githubUrl = 'https://github.com/Shadorux/indie-site-audit';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="A fast, open-source website audit for indie sites. Check SEO, accessibility, metadata, feeds, robots.txt, sitemaps and more." />
+    <meta property="og:title" content="Indie Site Audit" />
+    <meta property="og:description" content="Audit the boring-but-important parts of your indie website in seconds." />
+    <title>Indie Site Audit — Free website health check</title>
+    <style>
+      :root { color-scheme: dark; --bg:#08090b; --panel:#111318; --line:#242832; --text:#f5f7fa; --muted:#9aa3b2; --lime:#b7ff4a; --cyan:#4de8ff; --red:#ff6b6b; --amber:#ffcf5a; }
+      *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 20% -10%,#1b2730 0,transparent 28%),radial-gradient(circle at 90% 0,#202515 0,transparent 24%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+      a{color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}.brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:-.03em}.mark{width:30px;height:30px;border:1px solid #3b414d;border-radius:9px;display:grid;place-items:center;background:#15181d;box-shadow:inset 0 0 0 1px #ffffff08}.nav a{font-size:14px;color:var(--muted);text-decoration:none}.hero{padding:88px 0 54px;text-align:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #2d323b;background:#11141a;padding:7px 11px;border-radius:999px;color:#c7ced8;font-size:13px}.dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 18px var(--lime)}h1{font-size:clamp(48px,8vw,92px);line-height:.94;letter-spacing:-.065em;margin:22px auto 20px;max-width:900px}.accent{background:linear-gradient(90deg,var(--lime),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.lede{max-width:680px;margin:0 auto;color:var(--muted);font-size:18px;line-height:1.65}.audit-box{margin:40px auto 0;max-width:820px;border:1px solid var(--line);padding:10px;border-radius:18px;background:#0d0f13cc;box-shadow:0 26px 80px #0008,0 0 0 1px #ffffff05 inset;display:flex;gap:10px}.audit-box input{flex:1;background:#15181d;border:1px solid #282d36;border-radius:12px;padding:17px 18px;color:white;font:inherit;outline:none}.audit-box input:focus{border-color:#667080}.audit-box button{border:0;border-radius:12px;background:var(--lime);color:#0b0e08;font-weight:850;padding:0 24px;font:inherit;cursor:pointer}.audit-box button:disabled{opacity:.55;cursor:wait}.micro{font-size:12px;color:#666f7c;margin-top:12px}.results{display:none;margin:36px auto 90px;max-width:900px;text-align:left}.results.show{display:block}.score-row{display:flex;gap:20px;align-items:center;margin-bottom:22px}.score{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;font-size:30px;font-weight:900;background:conic-gradient(var(--lime) var(--score),#252a31 0);position:relative}.score:after{content:"";position:absolute;inset:8px;background:var(--panel);border-radius:50%;z-index:0}.score span{position:relative;z-index:1}.score-copy h2{margin:0 0 6px;font-size:28px}.score-copy p{margin:0;color:var(--muted)}.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.check{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:16px;display:flex;gap:12px}.icon{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-weight:900;flex:none}.pass .icon{background:#17301d;color:var(--lime)}.warn .icon{background:#332c15;color:var(--amber)}.fail .icon{background:#34191b;color:var(--red)}.check h3{font-size:14px;margin:1px 0 5px}.check p{font-size:13px;line-height:1.45;color:var(--muted);margin:0;overflow-wrap:anywhere}.error{margin-top:16px;color:var(--red);font-size:14px}.features{border-top:1px solid #1d2128;padding:70px 0 90px}.features h2{text-align:center;font-size:34px;letter-spacing:-.04em}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}.card{border:1px solid var(--line);border-radius:16px;padding:22px;background:#0d0f13}.card b{display:block;margin-bottom:8px}.card p{color:var(--muted);font-size:14px;line-height:1.55;margin:0}.footer{border-top:1px solid #1d2128;padding:26px 0 40px;color:#68717e;font-size:13px;display:flex;justify-content:space-between}.footer a{color:#9ca5b3;text-decoration:none}@media(max-width:700px){.hero{padding-top:50px}.audit-box{flex-direction:column}.audit-box button{padding:15px}.checks,.grid{grid-template-columns:1fr}.score-row{align-items:flex-start}.footer{gap:16px;flex-direction:column}}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav class="nav">
+        <div class="brand"><span class="mark">⌁</span> Indie Site Audit</div>
+        <a href={githubUrl} target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+
+      <main>
+        <section class="hero">
+          <div class="eyebrow"><span class="dot"></span> open source · no account</div>
+          <h1>Your website deserves a <span class="accent">proper checkup.</span></h1>
+          <p class="lede">A fast audit for indie websites. SEO basics, accessibility signals, metadata, feeds, robots.txt, sitemaps and discoverability — without the enterprise dashboard nonsense.</p>
+
+          <form class="audit-box" id="audit-form">
+            <input id="url" name="url" type="text" inputmode="url" autocomplete="url" placeholder="yourcoolsite.net" aria-label="Website URL" required />
+            <button type="submit">Audit site</button>
+          </form>
+          <div class="micro">One public page is fetched server-side. Nothing is stored.</div>
+          <div class="error" id="error" role="status"></div>
+
+          <section class="results" id="results" aria-live="polite">
+            <div class="score-row">
+              <div class="score" id="score"><span>—</span></div>
+              <div class="score-copy"><h2 id="result-title">Audit complete</h2><p id="result-url"></p></div>
+            </div>
+            <div class="checks" id="checks"></div>
+          </section>
+        </section>
+
+        <section class="features">
+          <h2>Useful checks. Zero ceremony.</h2>
+          <div class="grid">
+            <article class="card"><b>Search-ready</b><p>Titles, descriptions, canonicals, heading structure, sitemaps and robots.txt.</p></article>
+            <article class="card"><b>Indie-web aware</b><p>RSS and Atom autodiscovery, internal links and the small details that make sites easier to find.</p></article>
+            <article class="card"><b>Open by default</b><p>No signup wall. No “book a demo.” The scanner and scoring logic live in the repository.</p></article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer"><span>Built for the weird web.</span><span>by <a href="https://shadorux.dev/">Shadorux</a></span></footer>
+    </div>
+
+    <script>
+      const form = document.querySelector('#audit-form');
+      const input = document.querySelector('#url');
+      const button = form.querySelector('button');
+      const results = document.querySelector('#results');
+      const checks = document.querySelector('#checks');
+      const score = document.querySelector('#score');
+      const resultUrl = document.querySelector('#result-url');
+      const error = document.querySelector('#error');
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        error.textContent = '';
+        results.classList.remove('show');
+        button.disabled = true;
+        button.textContent = 'Auditing…';
+        try {
+          const response = await fetch('/api/audit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ url: input.value }) });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || 'Audit failed.');
+          score.style.setProperty('--score', `${data.score * 3.6}deg`);
+          score.querySelector('span').textContent = `${data.score}`;
+          resultUrl.textContent = data.url;
+          checks.innerHTML = data.checks.map((item) => `<article class="check ${item.status}"><div class="icon">${item.status === 'pass' ? '✓' : item.status === 'warn' ? '!' : '×'}</div><div><h3>${escapeHtml(item.label)}</h3><p>${escapeHtml(item.detail)}</p></div></article>`).join('');
+          results.classList.add('show');
+          results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch (err) {
+          error.textContent = err instanceof Error ? err.message : 'Audit failed.';
+        } finally {
+          button.disabled = false;
+          button.textContent = 'Audit site';
+        }
+      });
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>'"]/g, (char) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' }[char]));
+      }
+    </script>
+  </body>
+</html>
