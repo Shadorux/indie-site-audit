@@ -1,7 +1,7 @@
 {
   "name": "indie-site-audit",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fast, open-source website health checks for indie sites.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +10,22 @@
     "preview": "astro preview",
     "check": "astro check"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "astro",
+    "seo",
+    "website-audit",
+    "indieweb",
+    "accessibility"
+  ],
+  "author": "Shadorux",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shadorux/indie-site-audit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shadorux/indie-site-audit/issues"
+  },
   "type": "module",
   "dependencies": {
     "@astrojs/node": "^11.1.6",
